@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="Main">
+<head>
+    <title>Whiskyshop</title>
+    <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app="Main">
+    <div class="row"></div>
+
+    <a ng-href="#/" class="col-lg-4">Hjem</a>
+    <div class="col-lg-4 pull-right" ng-show="basketNoOfProducts > 0" ng-include="'Basket/Basket.html'"></div>
+    <div ng-view>
+        </div>
+    
+
+    <div ></div>
+
+    <script src="node_modules\angular\angular.min.js"></script>
+    <script src="node_modules\angular-route\angular-route.js"></script>
+    <script src="Products/productsController.js"></script>
+    <script src="product/productController.js"></script>
+    <script src="Basket/basketController.js"></script>
+    <script src="CustomerCheckOut/checkoutController.js"></script>
+    <script src="app.js"></script>
+    <script src="services/dataService.js"></script>
+    <script src="services/basketService.js"></script>
+
+</body>
+</html>

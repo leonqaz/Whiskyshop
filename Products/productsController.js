@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     angular.module("Main.productsController", []).controller("productsController", productsController);
-    function productsController($scope, $rootScope, $location, dataService, basketService) {
+    function productsController($scope, $location, dataService, basketService) {
 
         $scope.categoriesSelected = new Array();
              
@@ -20,16 +20,11 @@
         $scope.buyPorduct = function(product)
         {
             basketService.updateBasket(product, 1);
-            $rootScope.basketNoOfProducts = basketService.getNoOfProducts();
-            $rootScope.basketPrice = basketService.getTotalPrice();
         }
 
         $scope.removeProduct = function(product)
         {
-     
             basketService.updateBasket(product, -1);
-            $rootScope.basketNoOfProducts = basketService.getNoOfProducts();
-            $rootScope.basketPrice = basketService.getTotalPrice();
         }
         $scope.gotoDetails = function(product)
         {

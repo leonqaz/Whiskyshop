@@ -1,5 +1,5 @@
 ﻿
-<div ng-controller="basketController">
+<div ng-controller="basketController" ng-show="basketNoOfProducts > 0">
     <div class="row">
         <img src="img/basket.jpg" class="col-lg-3" ng-click="showHideContent()" />
 
@@ -10,7 +10,7 @@
     </div>
     <div class="check-element animate-show" ng-show="displayContent">
         <div ng-include="'../Basket/BasketContent.html'"></div>
-        </div>
-
     </div>
+
+</div>
 

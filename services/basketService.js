@@ -2,22 +2,18 @@
     "use strict";
     var basketService = function ($http) {
         var basket = {};
-        var totalPrice = 0;
-        var noOfProducts = 0;
+        var subscribers = {};
         
-        // public method
-        var getTotalPrice = function () {
-            return totalPrice;
-        }
-        // public method
-        var getNoOfProducts = function()
-        {
-            return noOfProducts;
-        }
+      
         // public method
         var updateBasketItem = function(item)
         {
             handleBaksetUpdates(item.product, item.count);
+        }
+        // public method
+        var subscribeToBasketChanges = function(name, func)
+        {
+            subscribers[name] = func;
         }
         // public method
         var updateBasket = function(prod, changedCount)
@@ -41,10 +37,13 @@
                     product: prod,
                     count: buyCount
                 };
-
-            totalPrice = calcTotalPrice();
-            noOfProducts = countProducts();
-
+            callBasketSubscribers(calcTotalPrice(), countProducts());
+        }
+        var callBasketSubscribers = function (price, count)
+        {
+            for (var prop in subscribers) {
+                subscribers[prop](price, count);
+            }
         }
         var calcTotalPrice = function () {
             var total = 0;
@@ -69,11 +68,10 @@
         }
 
         return {
-            getTotalPrice: getTotalPrice,
-            getNoOfProducts: getNoOfProducts,
             updateBasket: updateBasket,
             updateBasketItem: updateBasketItem,
-            getBasket: getBasket
+            getBasket: getBasket,
+            subscribeToBasketChanges : subscribeToBasketChanges,
         };
 
     }

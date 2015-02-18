@@ -1,0 +1,27 @@
+﻿<div ng-controller="checkoutController">
+    <div class="col-lg-12 jumbotron inner">
+        <div class="col-lg-12">
+            <div class=" col-lg-1 ">Fornavn</div>
+            <input type="text" ng-model="customer.firstname" class="col-lg-3" />
+            <div class="col-lg-1 ">Efternavn</div>
+            <input type="text" ng-model="customer.lastname" class="col-lg-3" />
+        </div>
+        <div class="col-lg-12">
+            <div class=" col-lg-1 ">Vej</div>
+            <input type="text" ng-model="customer.street" class="col-lg-3" />
+            <div class="col-lg-1 ">Hus nr</div>
+            <input type="text" ng-model="customer.houseno" class="col-lg-1" />
+        </div>
+        <div class="col-lg-12">
+            <div class=" col-lg-1 ">Postnr</div>
+            <input type="text" ng-model="customer.zip" class="col-lg-3" />
+            <div class="col-lg-1 ">By</div>
+            <input type="text" ng-model="customer.ciyt" class="col-lg-1" />
+        </div>
+
+    </div>
+    <div class="col-lg-4 pull-right btn btn-success" ng-click="checkout()">
+        BESTIL
+    </div>
+</div>
+  

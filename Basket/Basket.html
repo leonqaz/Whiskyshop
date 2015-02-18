@@ -1,0 +1,16 @@
+﻿
+<div ng-controller="basketController">
+    <div class="row">
+        <img src="img/basket.jpg" class="col-lg-3" ng-click="showHideContent()" />
+
+        <div class="row pull-right col-lg-5">Antal produkter i kurv: {{basketNoOfProducts}}</div>
+        <div class="row pull-right col-lg-5">Total pris: {{basketPrice}}</div>
+        <a ng-href="#/checkout">Køb</a>
+
+    </div>
+    <div class="check-element animate-show" ng-show="displayContent">
+        <div ng-include="'../Basket/BasketContent.html'"></div>
+        </div>
+
+    </div>
+

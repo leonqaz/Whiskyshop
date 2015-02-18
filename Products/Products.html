@@ -1,0 +1,23 @@
+﻿
+    <div ng-controller="productsController">
+        {{error}}
+        <input type="search" placeholder="Søg efter products" ng-model="productName" />
+        <div class="row">
+            <div class="col-xs-2" ng-repeat="c in categories">
+                <input type="checkbox" class="checkbox-inline" ng-click="categoryChanged(c.origin)">   {{c.origin}}
+                </>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-3  jumbotron inner" ng-repeat=" product in products | filter:productName | filter:categoryFilter">
+                <p> <h4 class="bg-primary"> {{product.name}}</h4></p>
+                <img src="{{product.imageUrl}}" alt="Not avaiable" class="img-rounded" height="200">
+                <p> Pris: {{product.price}}</p>
+                <div class="btn btn-success glyphicon glyphicon-plus" ng-click=buyPorduct(product)></div>
+                <div class="btn btn-danger glyphicon glyphicon-minus" ng-click=removeProduct(product)></div>
+                <div class="btn btn-default" ng-click=gotoDetails(product)>Info</div>
+            </div>
+        </div>
+    </div>
+    

@@ -1,0 +1,27 @@
+﻿
+    <div ng-controller="productController">
+        <div class="page-header bg-primary">
+            <h4>{{product.name}}</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><img ng-src="{{product.imageUrl}}" /></div>
+            <div class="col-lg-4">
+                Beskrivelse
+                <div>
+                    {{product.description}}
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-offset-4"/>
+            <div class="row">
+                <div class="col-lg-6">
+                    Pris {{product.price}} Kr.
+
+                    
+                    <input type="number" ng-model="buyCount" placeholder="Antal"/>
+                    <div class="btn btn-success" ng-click=buyPorduct(product)>Køb</div>
+                </div>
+                </div>
+            </div>
+
+</div>

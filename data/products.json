@@ -1,0 +1,67 @@
+﻿[
+    {
+        "id": 5,
+            "name": "Ardbeg 10",
+            "price": 399,
+            "origin": "Islay",
+            "imageUrl": "./img/ardbeg10.png",
+            "description": "Jim Murray's 2008 World Whisky of the Year! When Ardbeg 10 was released it was the first expression from the distillery not to be chill-filtered. It's a true classic from Islay, and a must have for any fan of single malt whisky. "
+        },
+        {
+            "id": 6,
+            "name": "Stauning 4th edition peated",
+            "price": 900,
+            "origin":  "Denmark",
+            "imageUrl": "./img/stauning.png",
+            "description":"Stauning Peated er en Stauning Single Malt Whisky. En whisky, der appellerer til Islay-fans. (Islay = område i Skotland). Den har fået sit røgede karakteristika ved at tørre og ryge den maltede byg med tørverøg fra tørv opgravet ved Klosterlund Museum"
+        },
+        {
+            "id": 7,
+            "name": "Aberlour a'bunadh",
+            "price": 450,
+            "origin":  "Speyside",
+            "imageUrl": "./img/abelour.png",
+            "description":  "With each batch carefully made by hand, Aberlour A’bunadh is a unique cask strength whisky that has achieved cult status among whisky connoisseurs"
+        },
+        {
+            "id": 8,
+            "name": "Blaue maus",
+            "price": 400,
+            "origin":  "Germany",
+            "imageUrl": "./img/blauemaus.jpg",
+            "description" :  "Nose: Ah, that's more like it. More like whisky, I mean. Malty and fruity. Tangerine? A little dusty. Pleasantly spicy"
+        },
+        {   "id": 1,
+            "name": "Mackmyra The first edition",
+            "price": 500,
+            "origin":  "Sweden",
+            "imageUrl": "./img/mackmyra.png",
+            "description" :  "Nose: Fruity. Orchard fruits and citrus. Honey. Light spice. oaky, toffee. Palate: Gentle and fruity. Honey, spiced.Finish: Spiced, apples. Good length."
+        },
+        {
+            "id": 2,
+            "name": "As We Get it Islay",
+            "price": 300,
+            "origin":  "Islay",
+            "imageUrl": "./img/aswegetitislay.png",
+            "description" : "Nose: Quite sweet. Big on peat, toffee, barley. Crisp cereals, herbal. Palate: Big and rich. Spices, supple peat, good sweetness. Finish: Tarry, spices, oak. Long finish."
+        }
+        ,
+        {
+            "id": 3,
+            "name": "Highlandpark 12yrs",
+            "price": 450,
+            "origin":  "Highland",
+            "imageUrl": "./img/highlandpark.png",
+            "description": "Silver medal: Highlands & Islands up to 12yo - 2013 The Scotch Whisky Masters (The Spirits Business)"
+        }
+        ,
+        {
+            "id": 4,
+            "name": "Laphroig",
+            "price": 320,
+            "origin":  "Islay",
+            "imageUrl": "./img/laphroig.png",
+            "description" : "One of the most divisive Scotch whiskies, loved by those who enjoy its medicinal, smoky flavour and looked on in amazement by those who don't, it remains one of the most popular." 
+        }
+]

@@ -14,7 +14,8 @@
             $scope.basketNoOfProducts = count;
             $scope.basketPrice = price;
         }
-        basketService.subscribeToBasketChanges("basketController", setBasketCountPrice)
+        basketService.subscribeToBasketChanges(setBasketCountPrice)
+
         $scope.updateBasketItem = function (item)
         {
             basketService.updateBasketItem(item);

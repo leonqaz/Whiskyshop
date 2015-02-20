@@ -2,7 +2,7 @@
     "use strict";
     var basketService = function ($http) {
         var basket = {};
-        var subscribers = {};
+        var subscribers = new Array();
         
       
         // public method
@@ -11,9 +11,11 @@
             handleBaksetUpdates(item.product, item.count);
         }
         // public method
-        var subscribeToBasketChanges = function(name, func)
+        var i = 1;
+        var subscribeToBasketChanges = function(func)
         {
-            subscribers[name] = func;
+            subscribers.push(func);
+            func(calcTotalPrice(), countProducts()); //bring late subscribes up to speed
         }
         // public method
         var updateBasket = function(prod, changedCount)
@@ -41,9 +43,11 @@
         }
         var callBasketSubscribers = function (price, count)
         {
-            for (var prop in subscribers) {
-                subscribers[prop](price, count);
+            subscribers.forEach(function (entry)
+               {
+                entry(price, count);
             }
+)
         }
         var calcTotalPrice = function () {
             var total = 0;

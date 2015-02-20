@@ -26,7 +26,6 @@
             {
                 changedCount = p.count + changedCount;
             }
-            
             handleBaksetUpdates(prod,changedCount);
          
         }
@@ -37,7 +36,7 @@
             else
                 basket[prod.id] = {
                     product: prod,
-                    count: buyCount
+                    count: parseInt(buyCount)
                 };
             callBasketSubscribers(calcTotalPrice(), countProducts());
         }

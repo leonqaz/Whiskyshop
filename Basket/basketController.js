@@ -3,16 +3,17 @@
     angular.module("Main.basketController", []).controller("basketController", basketController);
     function basketController($scope, basketService) {
         $scope.displayContent = false;
-        $scope.basket = basketService.getBasket();
+      
 
         $scope.showHideContent = function () {
             console.log($scope.displayContent);
             $scope.displayContent = !$scope.displayContent;
         }
-        var setBasketCountPrice = function (price, count)
+        var setBasketCountPrice = function (basket)
         {
-            $scope.basketNoOfProducts = count;
-            $scope.basketPrice = price;
+            $scope.basketNoOfProducts = basket.productCount;
+            $scope.basketPrice = basket.totalPrice;
+            $scope.basket = basket.products;
         }
         basketService.subscribeToBasketChanges(setBasketCountPrice)
 

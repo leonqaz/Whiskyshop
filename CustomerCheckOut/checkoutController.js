@@ -2,11 +2,15 @@
     "use strict";
     angular.module("Main.checkoutController", []).controller("checkoutController", checkoutController);
     function checkoutController($scope, basketService) {
+        var basket = '';
        
-       
+        var keepBasket = function (refreshedBasket) {
+            basket = refreshedBasket;
+        }
+        
+        basketService.subscribeToBasketChanges(keepBasket)
 
         $scope.checkout = function () {
-            var basket = basketService.getBasket();
             console.log(basket);
             console.log($scope.customer);
         }

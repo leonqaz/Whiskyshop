@@ -63,7 +63,6 @@
                 total += basket.products[prop].count * basket.products[prop].product.price;
             }
             
-            console.log(total);
             return total;
         }
         var countProducts = function () {

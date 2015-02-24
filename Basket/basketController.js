@@ -1,12 +1,11 @@
 ﻿(function () {
     "use strict";
-    angular.module("Main.basketController", []).controller("basketController", basketController);
+    angular.module("Main.basketController", []).controller("basketController", basketController).directive("basketcontentWidget", basketcontentWidget);
     function basketController($scope, basketService) {
         $scope.displayContent = false;
       
 
         $scope.showHideContent = function () {
-            console.log($scope.displayContent);
             $scope.displayContent = !$scope.displayContent;
         }
         var setBasketCountPrice = function (basket)
@@ -21,5 +20,15 @@
         {
             basketService.updateBasketItem(item);
         }
+
+       
+    }
+    function basketcontentWidget() {
+        var widget = {
+            templateUrl: "./basket/BasketContent.html",
+            restrict: "E",
+            controller: basketController
+        }
+        return widget;
     }
 })();

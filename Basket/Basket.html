@@ -8,8 +8,9 @@
         <a ng-href="#/checkout">Køb</a>
 
     </div>
-    <div class="check-element animate-show" ng-show="displayContent">
-        <div ng-include="'../Basket/BasketContent.html'"></div>
+
+    <div ng-show="displayContent">
+        <basketcontent-widget></basketcontent-widget>
     </div>
 
 </div>

@@ -1,0 +1,2 @@
+c:\users\leo\documents\visual studio 2013\Projects\Whiskyshop\Whiskyshop\obj\Debug\Whiskyshop.njsprojResolveAssemblyReference.cache
+c:\users\leo\documents\visual studio 2013\Projects\Whiskyshop\Whiskyshop\bin\Microsoft.NodejsTools.WebRole.dll

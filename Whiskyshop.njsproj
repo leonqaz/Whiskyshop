@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Whiskyshop</Name>
+    <RootNamespace>Whiskyshop</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e8c7323d-ea6c-4312-82d4-cf0f587ccb41</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="data\dataAccess.js" />
+    <Compile Include="data\schema.js" />
+    <Compile Include="Public\Admin\ordersAdminController.js" />
+    <Compile Include="Public\Admin\originsAdminController.js" />
+    <Compile Include="Public\Admin\whiskiesAdminController.js" />
+    <Compile Include="Public\app.js" />
+    <Compile Include="Public\Basket\basketController.js" />
+    <Compile Include="Public\CustomerCheckOut\checkoutController.js" />
+    <Compile Include="Public\Products\productsController.js" />
+    <Compile Include="Public\product\productController.js" />
+    <Compile Include="routes\routes.js" />
+    <Compile Include="server.js" />
+    <Compile Include="Public\services\basketService.js" />
+    <Compile Include="Public\services\dataService.js" />
+    <Content Include="Public\Admin\ordersAdmin.html" />
+    <Content Include="Public\Admin\originsAdmin.html" />
+    <Content Include="Public\Admin\whiskiesAdmin.html" />
+    <Content Include="Public\Basket\Basket.html" />
+    <Content Include="Public\Basket\BasketContent.html" />
+    <Content Include="Public\CustomerCheckOut\checkOut.html" />
+    <Content Include="Public\CustomerCheckOut\Customer.html" />
+    <Content Include="Public\img\abelour.png" />
+    <Content Include="Public\img\ardbeg10.png" />
+    <Content Include="Public\img\aswegetItIslay.png" />
+    <Content Include="Public\img\basket.jpg" />
+    <Content Include="Public\img\blauemaus.jpg" />
+    <Content Include="Public\img\highlandpark.png" />
+    <Content Include="Public\img\laphroig.png" />
+    <Content Include="Public\img\mackmyra.png" />
+    <Content Include="Public\img\stauning.png" />
+    <Content Include="Public\Index.html" />
+    <Content Include="package.json" />
+    <Content Include="Public\Products\Products.html" />
+    <Content Include="Public\product\Product.html" />
+    <Content Include="README.md" />
+    <Content Include="Public\styles.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="Public\Admin\" />
+    <Folder Include="routes\" />
+    <Folder Include="Public\Basket\" />
+    <Folder Include="Public\CustomerCheckOut\" />
+    <Folder Include="Public\img\" />
+    <Folder Include="Public\" />
+    <Folder Include="Public\Products\" />
+    <Folder Include="Public\product\" />
+    <Folder Include="Public\services\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

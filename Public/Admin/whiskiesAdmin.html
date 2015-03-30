@@ -1,0 +1,37 @@
+﻿<div>
+    
+    <div class="col-lg-11 inner" ng-repeat="w in Whiskies" >
+        
+       <div class="col-lg-11"> 
+           <div class="col-lg-4"><label>Navn</label><input type="text" value="{{w.name}}" ng-model="w.name" class="form-control" /></div>
+           <div class="col-lg-3"><label>Opbrindelse</label><select ng-model=" w.origin" ng-options=" o.origin for o in Origins" ng-init="w.origin = Origins[selectOrigin(w)]" class="form-control"></select></div>
+           <div class="col-lg-2"><label>Pris</label><input type="number" ng-model="w.price" value="{{w.price}}" class="form-control " /></div>
+           <div class="col-lg-2"><label>Billede url</label><input type="text" value="w.imageUrl" ng-model="w.imageUrl" class="form-control" /></div>
+        </div> 
+        <div class="col-lg-11">
+            <div class="col-lg-11"><label>Beskrivelse</label><input type="text" value="{{w.description}}" ng-model="w.description" class="form-control" /></div> 
+        </div>
+        <div class="col-lg-11">
+            <div class="btn btn-success" ng-click=alterWhisky(w)>Opdater</div> <div class="btn btn-danger" ng-click=deleteWhisky(w)>Slet</div>
+            </>
+        </div>
+    </div>
+
+    <div class="col-lg-11 inner" >
+
+        <div class="col-lg-11">
+            <div class="col-lg-4"><label>Navn</label><input type="text" value="" ng-model="newWhisky.name" class="form-control" /></div>
+            <div class="col-lg-3"><label>Opbrindelse</label><select ng-model=" newWhisky.origin" ng-options=" o.origin for o in Origins" ng-init="w.origin = Origins[0]" class="form-control"></select></div>
+            <div class="col-lg-2"><label>Pris</label><input type="number" ng-model="newWhisky.price" value="" class="form-control " /></div>
+            <div class="col-lg-2"><label>Billede url</label><input type="text" value="" ng-model="newWhisky.imageUrl" class="form-control" /></div>
+        </div>                                                                                             
+        <div class="col-lg-11">
+            <div class="col-lg-11"><label>Beskrivelse</label><input type="text" value="" ng-model="newWhisky.description" class="form-control" /></div>
+        </div>
+        <div class="col-lg-11">
+            <div class="btn btn-success" ng-click=createWhisky()>Opret</div>
+            
+        </div>
+    </div>
+    
+</div>

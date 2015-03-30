@@ -1,0 +1,21 @@
+﻿<div>
+    <div class="col-lg-11 inner" ng-repeat="o in Orders">
+        <h2>Kunde</h2>
+        <div class="col-lg-12"> {{o.customer[0].firstname}} {{o.customer[0].lastname}}</div>
+        <div class="col-lg-12">
+            {{o.customer[0].street}} {{o.customer[0].houseNo}}
+            </div>
+        <div class="col-lg-12">
+            {{o.customer[0].zip}} {{o.customer[0].city}}
+            </div>
+            <h2>Ordre</h2>
+            <div ng-repeat="b in o.basket">
+                <div ng-repeat="p in b.products">
+                    <div class="col-lg-3"> {{p.count}} stk </div>
+                    <div class="col-lg-6">{{p.product[0].name}}</div>  
+                    <div class="col-lg-3">a {{p.product[0].price}} kr.</div></div>
+                total pris: {{b.totalPrice}}
+            </div>
+        <div class="btn btn-danger" ng-click=deleteOrder(o._id)>Slet</div>
+        </div>
+</div>

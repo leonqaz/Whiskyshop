@@ -37,6 +37,6 @@ db.once('open', function (callback) {
     console.log("Connection created");
 });
 
-var server = app.listen(3000, function () {
-    console.log(__dirname);
+var server = app.listen((process.env.PORT || 3000), function () {
+    console.log(process.env.PORT);
 })

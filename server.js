@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var routes = require('./routes/routes.js');
 var ejs = require("ejs");
-var router = express.Router();
+//var router = express.Router();
 var mongoose = require('mongoose');
 var dbname = 'WhiskyShop';
 var bodyParser = require('body-parser')
@@ -24,9 +24,10 @@ app.delete("/whisky/:id", routes.delWhisky);
 app.put("/order/", routes.putOrder);
 app.get("/orders/", routes.getOrders);
 app.delete("/order/:id", routes.deleteOrder)
-app.use('/', router);
+//app.use('/', router);
 
-mongoose.connect("mongodb://localhost/" + dbname);
+
+mongoose.connect("mongodb://dbuser:Pa$$w0rd@ds059471.mongolab.com:59471/whiskydb");
 
 var db = mongoose.connection;
 db.on('error', console.error);

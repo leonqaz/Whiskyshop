@@ -1,4 +1,4 @@
-﻿
+﻿console.log("server.js top");
 var express = require('express');
 var app = express();
 var routes = require('./routes/routes.js');
@@ -7,6 +7,7 @@ var ejs = require("ejs");
 var mongoose = require('mongoose');
 var dbname = 'WhiskyShop';
 var bodyParser = require('body-parser')
+console.log("setup static");
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -26,9 +27,10 @@ app.get("/orders/", routes.getOrders);
 app.delete("/order/:id", routes.deleteOrder)
 //app.use('/', router);
 
-
+console.log("mongoose connect");
 mongoose.connect("mongodb://dbuser:Pa$$w0rd@ds059471.mongolab.com:59471/whiskydb");
 
+console.log("mongoose connect2");
 var db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function (callback) {

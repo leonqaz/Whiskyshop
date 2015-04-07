@@ -1,0 +1,11 @@
+﻿<div>
+    <div class="col-lg-12" ng-repeat="o in Origins">
+        <input type="text" value="{{o.origin}}" ng-model="o.origin"  /> <div class="btn btn-success" ng-click=alterOrigin(o)>Opdater</div> <div class="btn btn-danger" ng-click=deleteOrigin(o)>Slet</div>
+        </>
+    </div>
+    <div class="col-lg-12">
+        <input type="text" ng-model="newOrigin" />
+        <div class="btn btn-success"  ng-click=createOrigin()>Opret</div>
+    </div>
+</div>
+

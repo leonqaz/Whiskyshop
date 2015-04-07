@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="data\dataAccess.js" />
     <Compile Include="data\schema.js" />
+    <Compile Include="Procfile" />
     <Compile Include="Public\Admin\ordersAdminController.js" />
     <Compile Include="Public\Admin\originsAdminController.js" />
     <Compile Include="Public\Admin\whiskiesAdminController.js" />

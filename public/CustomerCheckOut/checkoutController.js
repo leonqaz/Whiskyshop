@@ -12,7 +12,7 @@
 
         $scope.checkout = function () {
             console.log(basket);
-            dataService.putOrder(basket, $scope.customer);
+            dataService.putOrder(basket, $scope.customer).then(function () { alert("Tak for handlen!") });
         }
 
       
